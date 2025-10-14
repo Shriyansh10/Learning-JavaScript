@@ -1,4 +1,4 @@
-// let tinderUser = new Object();
+// let tinderUser = new Object(); // this is how singleton is made
 const tinderUser = {};
 tinderUser.name = "Shriyansh";
 tinderUser.age = 27;
