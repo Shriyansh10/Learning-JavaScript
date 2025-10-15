@@ -20,7 +20,7 @@ const user2 = {
     price : 999,
     welcomeMessage: user.welcomeMessage
 }
-// user2.welcomeMessage();
+console.log(user2.welcomeMessage);
 
 // function chai(){
 //     const name = "shriyansh"
@@ -44,5 +44,5 @@ const user2 = {
 
 // const addTwoNumber = (num1, num2) => (num1 + num2)  // () => no return statement, {} => return necessary
 
-const addTwoNumber = (num1, num2) => ({name: "shriyansh"})  // to return object we have to put {} in ()
+const addTwoNumber = (num1, num2) => ({name: "shriyansh"})  // to return object we have to put {} inside ()
 console.log(addTwoNumber(5,7));

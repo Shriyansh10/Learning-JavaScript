@@ -2,7 +2,7 @@
 // const repoCount = 50;
 
 // console.log(name + " "+repoCount+" Value");  // => outdated way
-// console.log(`Hello my name is ${name} and my repoCount is ${repoCount}`);
+// console.log(`Hello my name is ${name} and my repoCount is ${repoCount}`);  // string interpolation
 
 const name = new String("Shriyansh");
 
@@ -31,4 +31,4 @@ const url = new String("https://shriyansh.com/shriyansh%20agarwal");
 console.log(url.replace("%20", "-"));
 
 const arr = url.split("/");
-console.log(arr);
+console.log(arr);  // => [ 'https:', '', 'shriyansh.com', 'shriyansh%20agarwal' ]

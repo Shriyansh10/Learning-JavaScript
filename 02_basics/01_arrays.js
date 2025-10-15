@@ -2,6 +2,7 @@ const arr = [123, 242, 'shriyansh', function mood(){console.log(`mood called!`)}
 
 // console.log(arr); // => [ 123, 242, 'shriyansh', [Function: mood] ]
 
+arr.pop("shriyansh")
 // arr.push(true);
 // arr.push(123n);
 // arr.pop();

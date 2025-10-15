@@ -7,7 +7,7 @@ let accountState;
 // accountId = 2;
 accountEmail = "agarwal@gmail.com";
 accountPassword = "4322";
-accountCity = "Manipal";
+accountCity = "Manipal";   //can also decalare without let,const and var
 
 console.log(accountId);
 
