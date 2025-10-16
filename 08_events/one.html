@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+    <style>
+        ul.childNodes{
+
+        }
+    </style>
+</head>
+<body  style="background-color: #414141; color: aliceblue;">
+     <h2>Amazing image</h2>
+    <div id="parent">
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+    // document.getElementById("owl").onclick = () => alert("Owl Clicked")
+    
+    // attachEvent()
+    // jQuery
+    
+    // type, timestamp, defaultPrevented, 
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY,
+    // altkey, ctrlkey, shiftkey, keyCode
+
+    // e.stopPropogation() // =>  it prevents the event from propagating further up or down the Document Object Model (DOM) tree during the capturing and bubbling phases of event flow. 
+
+    // e.preventDefault() // =>  used within an event handler to prevent the default action associated with that event from occurring
+
+    // document.getElementById("parent").addEventListener('click', function(e){
+    //     console.log("grandparent clicked");
+        
+    // }, false);
+    // document.getElementById("images").addEventListener('click', function(e){
+    //     console.log("parent clicked");
+        
+    // }, false);
+    // document.getElementById("owl").addEventListener('click', function(e){
+    //     console.log("child clicked");
+        
+    // }, false);
+    document.getElementById("google").addEventListener('click', function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        console.log(`google clicked`)
+        
+    }, false);
+
+    // const dom = document.querySelector("#images")
+    // const arr = Array.from( document.querySelectorAll("#images li"));
+    // // const arrli = arr.filter((item) => {return})
+    // arr.forEach((li) => {
+    //     li.addEventListener("click", function(e){
+    //         if(e.target.tagName === "IMG"){
+    //             const img = e.srcElement.parentElement;
+    //             dom.removeChild(img);
+    //         }
+    //     }, false);
+    // }) // => dont add eventlistener on individual li item instead add on parent element and keep a check whether it is img tag or not
+
+    document.querySelector("#images").addEventListener("click", function(e){
+        if(e.target.tagName === "IMG"){
+            e.target.parentElement.remove();
+        }
+    }, false)
+
+</script>
+</html>

@@ -1,0 +1,27 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+nav{
+    background-color: grey;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* nav, a{
+    
+} */
+
+.containers{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.containers .container{
+    width:50px;
+    height:50px;
+}
