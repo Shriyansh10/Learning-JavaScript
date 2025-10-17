@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="https://www.youtube.com">Youtube</a>
+    </nav>
+
+    <section>
+        <h1>BMI Calculator</h1>
+
+        <form id="input_form">
+            <label for="height">Height in cm</label>
+            <input type="number" name="" id="height" placeholder="Enter Height in cms" step="0.01">
+            <label for="weight">Weight in kg</label>
+            <input type="number" name="" id="weight" placeholder="Enter Weight in kgs" step="0.01">
+            <button type="submit" id="button_submit">Calculate</button>
+        </form>
+
+        <div class="result"></div>
+
+        <div class="guide">
+            <div style="font-size:larger; font-weight: bolder;">BMI Weight Guide</div>
+            <div>Under Weight = Less than 18.6</div>
+            <div>Normal Weight = 18.6 and 24.9</div>
+            <div>Over Weight = More than 24.9</div>
+        </div>
+    </section>
+</body>
+<script src="./project_2.js"></script>
+</html>

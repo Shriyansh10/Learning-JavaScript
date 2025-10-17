@@ -3,6 +3,11 @@
     margin: 0;
 }
 
+body{
+    background-color: white;
+    color: black
+}
+
 nav{
     background-color: grey;
     padding: 10px;
@@ -11,14 +16,15 @@ nav{
     align-items: center;
 }
 
-/* nav, a{
-    
-} */
+nav ul li{
+    text-decoration: none;
+}
 
 .containers{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    background-color: #a1a1a1;
 }
 
 .containers .container{
