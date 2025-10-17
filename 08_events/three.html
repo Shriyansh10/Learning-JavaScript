@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur Code</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    let interval;
+    document.querySelector("#start").addEventListener('click', () => {
+        if(!interval)
+        interval =  setInterval(() => console.log(`interval called`), 10000);
+    else{
+        console.log(`interval already started`);
+        console.log(interval);
+    }
+    })
+    document.querySelector("#stop").addEventListener('click', () => {
+        clearInterval(interval)
+        interval = null
+    })
+    // clearInterval(interval)
+    
+</script>
+</html>

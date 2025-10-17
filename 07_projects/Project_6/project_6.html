@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="https://www.youtube.com">Youtube</a>
+    </nav>
+    <section>
+        <h1>Unlimited Background Colors</h1>
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+    </section>
+</body>
+<script>
+    let intervalID;
+    const body = document.querySelector("body")
+    document.querySelector("section").addEventListener('click', (e) => {
+        if(e.target.id === "start"){ 
+            if(!intervalID){
+                intervalID = setInterval(
+                    function(){
+                        body.style.backgroundColor = randomColorGenerator();
+                    } , 0  
+                );
+            }
+        }else if(e.target.id === "stop"){
+            clearInterval(intervalID);
+            intervalID = null;
+        }
+    },false);
+
+
+    function randomColorGenerator(){
+        const red = Math.floor(Math.random() * 255 )
+        const green = Math.floor(Math.random() * 255 )
+        const blue = Math.floor(Math.random() * 255 )
+
+        return `rgb(${red}, ${green}, ${blue})`;
+    }
+    
+</script>
+</html>
