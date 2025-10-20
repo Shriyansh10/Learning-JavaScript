@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currying example</title>
+</head>
+<body>
+    <button id="blue">Blue</button>
+    <button id="orange">Orange</button>
+</body>
+<script>
+    // document.querySelector("#orange").onclick = function() {
+    //     document.body.style.backgroundColor = `orange`;
+    // }
+    // document.querySelector("#blue").onclick = function() {
+    //     document.body.style.backgroundColor = `blue`;
+    // }
+    function clickhandler(color){
+        return ()=>document.body.style.backgroundColor = `${color}`;
+    }
+    document.querySelector("#orange").onclick = clickhandler(`orange`);
+    document.querySelector("#blue").onclick = clickhandler(`blue`);
+
+</script>
+</html>
