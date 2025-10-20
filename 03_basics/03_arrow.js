@@ -4,8 +4,8 @@ const user = {
 
     welcomeMessage: function(){
         console.log(`Welcome ${this.username} to this website`);
-        // console.log(`this is ${this}`);  // dont use this in string interpolation as the object will also stringify and we wont get an object
-        // console.log(this);
+        console.log(`this is ${this}`);  // dont use this in string interpolation as the object will also stringify and we wont get an object
+        console.log(this);
     }
 
 }
